@@ -1,0 +1,14 @@
+<h2>Veículos Cadastrados</h2>
+<div class="lista-container">
+    {{#each tbl_veiculos}}
+    <div class="lista-card">
+    <p>{{this.placa}}</p> 
+    <p>{{this.modelo}}</p> 
+    <p>{{this.marca}}</p>
+    <p>{{this.ano}}</p>
+    <form action="/veiculos/remover/{{this.placa}}" method="POST">
+    <input type="submit" value="Remover">
+    </form>
+    </div>
+    {{/each}}
+</div>
